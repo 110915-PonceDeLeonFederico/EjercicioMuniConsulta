@@ -49,7 +49,7 @@ public class Municipalidad {
         String listPagoCont="";
         for (int i = 0; i < planes.length; i++) {
             if (planes[i]!= null) {
-                listPagoCont=planes[i].getNombre();
+                listPagoCont+=planes[i].getNombre()+",";
             }
         }
         return listPagoCont;

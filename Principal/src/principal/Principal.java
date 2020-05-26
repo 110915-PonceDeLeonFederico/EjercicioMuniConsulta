@@ -38,6 +38,7 @@ public class Principal {
             System.out.println("El promedio de intereses pagados por los contribuyentes es de: "+muni.promedioIntereses());
             System.out.println("Listado de pagos: "+pa.toString());
         }
+        
     }
     
 }
