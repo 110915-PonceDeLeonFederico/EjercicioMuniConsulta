@@ -26,15 +26,15 @@ public class Municipalidad {
         return cantidad;
     }
     public double promedioIntereses(){
-        double totalIntereses=0;
+        double acumIntereses=0;
         int contadorPlanes=0;
         for (int i = 0; i < planes.length; i++) {
             if (planes[i]!=null) {
-                totalIntereses+=planes[i].sumaInteresesCobrados();
-                contadorPlanes++;
+                acumIntereses+=planes[i].sumaInteresesCobrados();
             }
         }
-        return (double)totalIntereses/contadorPlanes;
+        contadorPlanes=planes.length;
+        return acumIntereses/contadorPlanes;
     }
     public double sumatoriaDeuda(){
         double sumDeuda=0;
@@ -45,19 +45,22 @@ public class Municipalidad {
         }
         return sumDeuda;
     }
-    public String listadoPagosContribuyente(String nombre){
-        String listPagoCont="";
+
+    public String listadoPagosContribuyente(String nombre) {
+        String resultado="";
         for (int i = 0; i < planes.length; i++) {
-            if (planes[i]!= null){
-                if (planes[i].getNombre().equals(nombre)) {
-                    listPagoCont=planes[i].listadoPagos();
-                break;
-                }else{
-                    listPagoCont="El contribuyente "+nombre+" no tiene plan registrado";
-                }
+            //Comparo cadenas con equals
+            //recorre planes filtrado por contriy pide el listado de pagos
+            if (planes[i]!=null && planes[i].getNombre().equals(nombre)) {
+                resultado += planes[i].cantidadPagos();
             }
         }
-        return listPagoCont;
+        return resultado;
     }
+    
+    
+
+    
 }
+//
 

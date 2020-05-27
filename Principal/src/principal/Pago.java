@@ -34,10 +34,6 @@ public class Pago {
         this.interesesAdicionales = interesesAdicionales;
     }
 
-    @Override
-    public String toString() {
-        return "Pago{" + "demora=" + demora + ", importe=" + importe + ", interesesAdicionales=" + interesesAdicionales + '}';
-    }
     
     
 }

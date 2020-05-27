@@ -13,7 +13,6 @@ public class Plan {
         this.cuotas = cuotas;
         pagos=new Pago[cuotas];//Dimensiono el tamaño del vector de pagos
     }
-
     public String getNombre() {
         return nombre;
     }
@@ -56,18 +55,10 @@ public class Plan {
         }
         return sumaIntereses;
     }
-    public String listadoPagos(){
-        int contadorPagos=0;
-        String listPagos="";
-        for (int i = 0; i < pagos.length; i++) {
-            if (pagos[i]!= null) {
-                contadorPagos++;
-                listPagos+=" Pago "+contadorPagos+":"+pagos[i].toString();
-            }if (contadorPagos==0) {
-                listPagos="El contribuyente no realizo pagos";
-            }
-        }return listPagos;
+    public int cantidadPagos(){
+        return pagos.length;
     }
+    
     
     
     

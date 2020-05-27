@@ -34,10 +34,12 @@ public class Principal {
         }
         System.out.println("La cantidad de planes pagados totalmente es de: "+muni.cantidadPlanesPagados());
         System.out.println("La sumatoria de deudas es de: "+muni.sumatoriaDeuda());
-        System.out.println("Ingrese nombre del contrubuyente a analizar: ");
+        System.out.print("Ingrese nombre del contrubuyente a analizar: ");
         sc.nextLine();
         String nombre=sc.nextLine();
-        System.out.println("Listado de pagos del contribuyente "+nombre+": "+muni.listadoPagosContribuyente(nombre));
+        System.out.println("El listado de pagos del contruyente: ");
+        System.out.println(muni.listadoPagosContribuyente(nombre));
+        //System.out.println("Listado de pagos del contribuyente "+nombre+": ");
         System.out.println("El promedio de intereses pagados por los contribuyentes es de: "+muni.promedioIntereses());
     }
     
