@@ -28,7 +28,7 @@ public class Pago {
         this.interesesAdicionales = interesesAdicionales;
     }
 
-    public Pago(int demora, float importe, float interesesAdicionales) {
+    public Pago(int demora, float importe,float interesesAdicionales) {
         this.demora = demora;
         this.importe = importe;
         this.interesesAdicionales = interesesAdicionales;

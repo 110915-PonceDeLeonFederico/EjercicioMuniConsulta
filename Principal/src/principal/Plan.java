@@ -57,10 +57,14 @@ public class Plan {
         return sumaIntereses;
     }
     public String listadoPagos(){
+        int contadorPagos=0;
         String listPagos="";
         for (int i = 0; i < pagos.length; i++) {
             if (pagos[i]!= null) {
-               listPagos= pagos[i].toString();
+                contadorPagos++;
+                listPagos+=" Pago "+contadorPagos+":"+pagos[i].toString();
+            }if (contadorPagos==0) {
+                listPagos="El contribuyente no realizo pagos";
             }
         }return listPagos;
     }

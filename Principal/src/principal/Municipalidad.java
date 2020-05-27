@@ -48,8 +48,13 @@ public class Municipalidad {
     public String listadoPagosContribuyente(String nombre){
         String listPagoCont="";
         for (int i = 0; i < planes.length; i++) {
-            if (planes[i]!= null) {
-                listPagoCont+=planes[i].getNombre()+",";
+            if (planes[i]!= null){
+                if (planes[i].getNombre().equals(nombre)) {
+                    listPagoCont=planes[i].listadoPagos();
+                break;
+                }else{
+                    listPagoCont="El contribuyente "+nombre+" no tiene plan registrado";
+                }
             }
         }
         return listPagoCont;
